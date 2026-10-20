@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roshan Tiwari | Web Developer</title>
+  <meta name="description" content="Portfolio of Roshan Tiwari, a web developer.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main">
+      <a href="#top" class="logo">Roshan Tiwari</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero container">
+      <h1>Hi, I'm Roshan Tiwari.<br>I build clear, fast websites.</h1>
+      <p class="tagline">Front-end developer based in Bhopal, India. I turn ideas into simple pages people enjoy using.</p>
+      <a href="#projects" class="btn">See my projects</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section container about">
+      <img class="avatar"
+           src="WhatsApp Image 2026-10-15 at 12.46.00.jpeg"
+           alt="Portrait of Roshan Tiwari" width="260" height="260">
+      <div>
+        <h2>About me</h2>
+        <p>I'm a student and self-taught developer who enjoys building websites from scratch with HTML, CSS and JavaScript. I care about clean layouts, readable code and pages that work on every screen size.</p>
+        <p>Right now I'm building small projects, learning React, and looking for an internship where I can keep growing.</p>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML5</li>
+        <li>CSS3 &amp; Flexbox/Grid</li>
+        <li>JavaScript (ES6)</li>
+        <li>Responsive design</li>
+        <li>Git &amp; GitHub</li>
+        <li>Figma basics</li>
+      </ul>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <article class="project">
+          <!-- Replace with a real screenshot: <img src="images/todo.png" alt="..."> -->
+          <div class="project-img" role="img" aria-label="Screenshot placeholder for the To-do app"></div>
+          <div class="project-body">
+            <h3>To-do app</h3>
+            <p>A task list that saves your items in the browser. Built with vanilla JavaScript and localStorage.</p>
+            <a href="#" class="link">View code</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-img alt" role="img" aria-label="Screenshot placeholder for the Weather page"></div>
+          <div class="project-body">
+            <h3>Weather page</h3>
+            <p>Search any city and see the current weather. Uses a public weather API and fetch().</p>
+            <a href="#" class="link">View code</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-img alt2" role="img" aria-label="Screenshot placeholder for the Recipe site"></div>
+          <div class="project-body">
+            <h3>Recipe site</h3>
+            <p>A responsive recipe collection with a CSS Grid layout that adapts from phone to desktop.</p>
+            <a href="#" class="link">View code</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== RESUME ========== -->
+    <section id="resume" class="section container resume">
+      <h2>Resume</h2>
+      <p>Want the full picture? Download my resume as a PDF.</p>
+      <!-- Put your file next to index.html and name it resume.pdf -->
+      <a href="resume.pdf" class="btn" download>Download resume (PDF)</a>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section container contact">
+      <div>
+        <h2>Contact</h2>
+        <p>Have a project or an opportunity in mind? Send a message or reach me directly.</p>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:roshan3010@gmail.com">roshan3010@gmail.com</a></li>
+          <li>Phone: <a href="tel:+919335485941">+91 93354 85941</a></li>
+          <li>Location: Bhopal, Madhya Pradesh</li>
+        </ul>
+      </div>
+
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+        <span class="error" data-for="name"></span>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+        <span class="error" data-for="email"></span>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <span class="error" data-for="message"></span>
+
+        <button type="submit" class="btn">Send message</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Roshan Tiwari. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/roshantiwari" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/roshantiwari" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

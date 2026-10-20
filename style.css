@@ -1,0 +1,134 @@
+/* ========== 1. VARIABLES & RESET ========== */
+:root {
+  --ink: #14213d;
+  --paper: #f4f7f9;
+  --card: #ffffff;
+  --muted: #55627a;
+  --accent: #e0a100;      /* change this one color to restyle the site */
+  --accent-dark: #a97700;
+  --line: #d9e1e8;
+  --radius: 10px;
+  --max: 1000px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+}
+img { max-width: 100%; display: block; }
+a { color: var(--ink); }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.2; margin: 0 0 .6em; }
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
+h2 { font-size: 1.9rem; }
+p { margin: 0 0 1em; max-width: 62ch; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+.container { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+.section { padding: 4rem 0; border-top: 1px solid var(--line); }
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* ========== 2. HEADER & NAV ========== */
+.site-header { background: var(--ink); color: #fff; }
+.site-header a { color: #fff; }
+
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 0; position: relative;
+}
+.logo { font-family: Georgia, serif; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a { text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent; }
+.nav-links a:hover, .nav-links a.active { border-bottom-color: var(--accent); }
+
+.nav-toggle {
+  display: none; background: none; color: #fff;
+  border: 1px solid #fff; border-radius: 6px; padding: .4rem .8rem; font: inherit; cursor: pointer;
+}
+
+.hero { padding: 5rem 0 6rem; }
+.tagline { color: #c5cfe0; font-size: 1.15rem; margin-bottom: 2rem; }
+
+/* ========== 3. BUTTONS & LINKS ========== */
+.btn {
+  display: inline-block; padding: .75rem 1.4rem; border-radius: var(--radius);
+  background: var(--accent); color: var(--ink) !important; font: inherit; font-weight: 600;
+  text-decoration: none; border: 2px solid var(--accent); cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+.btn:hover { background: #f2b61a; transform: translateY(-2px); }
+.btn-outline { background: transparent; color: #fff !important; border-color: #fff; margin-left: .5rem; }
+.btn-outline:hover { background: rgba(255,255,255,.12); }
+.link { font-weight: 600; text-decoration-color: var(--accent); text-underline-offset: 4px; }
+
+/* ========== 4. ABOUT ========== */
+.about { display: grid; grid-template-columns: 260px 1fr; gap: 3rem; align-items: center; }
+.avatar { width: 260px; height: 260px; object-fit: cover; object-position: 55% 25%; border-radius: 50%; border: 6px solid var(--card); box-shadow: 0 0 0 3px var(--accent); }
+
+/* ========== 5. SKILLS ========== */
+.skills { display: flex; flex-wrap: wrap; gap: .75rem; }
+.skills li {
+  background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+  padding: .5rem 1.1rem; font-weight: 500;
+}
+
+/* ========== 6. PROJECTS ========== */
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.project { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.project-img { height: 160px; background: linear-gradient(135deg, #14213d, #3b5b8c); }
+.project-img.alt  { background: linear-gradient(135deg, #e0a100, #f6d77a); }
+.project-img.alt2 { background: linear-gradient(135deg, #2f6f6a, #8ec9c2); }
+.project-img img { width: 100%; height: 100%; object-fit: cover; }
+.project-body { padding: 1.25rem; }
+.project-body p { color: var(--muted); }
+
+/* ========== 7. RESUME ========== */
+.resume { text-align: left; }
+
+/* ========== 8. CONTACT ========== */
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.contact-list li { margin-bottom: .4rem; }
+
+form { display: grid; gap: .35rem; }
+label { font-weight: 600; margin-top: .6rem; }
+input, textarea {
+  width: 100%; padding: .7rem .8rem; font: inherit;
+  border: 1px solid #b8c4d0; border-radius: 8px; background: var(--card); color: var(--ink);
+}
+input.invalid, textarea.invalid { border-color: #b3261e; }
+.error { color: #b3261e; font-size: .9rem; min-height: 1.2em; }
+form .btn { justify-self: start; margin-top: .6rem; }
+.form-status { color: #1f6b3a; font-weight: 600; margin: .5rem 0 0; }
+
+/* ========== 9. FOOTER ========== */
+.site-footer { background: var(--ink); color: #c5cfe0; padding: 1.5rem 0; }
+.footer-inner { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
+.footer-inner p { margin: 0; }
+.footer-links { display: flex; gap: 1.25rem; }
+.footer-links a { color: #fff; }
+
+/* ========== 10. RESPONSIVE (phones & small tablets) ========== */
+@media (max-width: 760px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none; flex-direction: column; gap: 0;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--ink); border-top: 1px solid #2c3b60; z-index: 10;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; padding: .8rem 0; border-bottom: none; }
+
+  .about, .contact { grid-template-columns: 1fr; gap: 2rem; }
+  .avatar { width: 200px; height: 200px; }
+  .btn-outline { margin: .75rem 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
